@@ -1,0 +1,46 @@
+body {
+    font-family: 'Merriweather', "Lucida Bright", serif;
+    background:#ffecb3;
+    color: #000000;
+    margin: 0;
+}
+h1 {
+    font-family: 'Anton','Tahoma', sans-serif;
+    text-align: center;
+}
+
+p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+#container {
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto
+}
+#second {
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto
+}
+
+
+@media screen and (max-width: 800px) {
+    #second {
+        width: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    #container {
+      width: auto;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+}

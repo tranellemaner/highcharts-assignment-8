@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demographics on Florida Income</title>
+<link href="https://fonts.googleapis.com/css?family=Anton|Merriweather" rel="stylesheet">
+<link rel="stylesheet" href="styles/index.css">
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/themes/gray.js"></script>
+</head>
+
+
+<body>
+  <h1>Florida Income Demographics</h1>
+
+    <div id="container"></div>
+      <p> Census data has collected the standalone race and combination race of householders in Florida. The standalone data shows a decrease in householders based on race. That data is analyzed for every race to look at the yearly income acquired in those homes. The data shows that despite large differences in householders based on race, the minorities in Florida have a greater percentage of holders in each level of income. Thus, the difference in householders does not equate to how much the minorities can make on an annual basis. </p>
+
+<script>
+Highcharts.chart('container', {
+  chart: {
+    type:'column'
+  },
+  title: {
+    text: 'House holders '
+  },
+  xAxis: {
+    categories: ['2017', '2016', '2015', '2014', '2013']
+  },
+  yAxis: {
+    title: {
+      text: 'Number of householders'
+    }
+  },
+  series: [{
+    name: 'All races',
+    data: [127586, 126224, 125819, 124587, 123931]
+  }, {
+    name: 'White Alone',
+    data: [100065, 99400, 99313, 98679, 98807]
+  }, {
+    name: 'Black Alone',
+    data: [16997, 16733, 16539, 16437, 16108]
+  }, {
+    name: 'Asian Alone',
+    data: [6735, 6392, 6328, 6040, 5818]
+  }]
+});
+</script>
+
+<div id="second"></div>
+
+<script>
+
+Highcharts.chart('second', {
+  chart: {
+    type: 'line'
+  },
+
+  title: {
+    text: 'Income Distribution for Householders in 2017'
+  },
+
+  subtitle: {
+    text: 'Source: WorldClimate.com'
+  },
+
+  xAxis: {
+    categories: ['Under $15,000', '$15,000 to $24,999', '$25,000 to $34,999', '$35,000 to $49,999', '$50,000 to $74,999', '$75,000 to $99,999', '$100,000 to $149,999', '$150,000 to $199,999', '$200,000 and over'],
+  },
+  yAxis: {
+    title: {
+      text: 'Percent of householders'
+    }
+  },
+  plotOptions: {
+    line: {
+      dataLabels: {
+        enabled: true
+      },
+      enableMouseTracking: false
+    }
+  },
+  series: [{
+    name: 'Black',
+    data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3]
+  }, {
+    name: 'White',
+    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2]
+  }, {
+    name: 'Asian',
+    data: [9.0, 6.6, 5.8, 9.6, 14.5, 12.9, 16.3, 10.8, 14.6]
+
+  }]
+});
+
+</script>
+</body>
+</html>

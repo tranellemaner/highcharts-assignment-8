@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="styles/main.css">
 
   <!-- add the Highcharts script elements here -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/themes/grid-light.js"></script>
+
 
 </head>
 <body>
@@ -16,9 +19,34 @@
   <h1>My first chart with Highcharts</h1>
 
   <!-- add the div and the chart code BELOW this comment -->
+  <div id="container" style="height:400px;"></div>
 
   <!-- the 'container' DIV must be EMPTY -->
-
+<script>
+  Highcharts.chart('container', {
+          chart: {
+              type: 'bar'
+          },
+          title: {
+              text: 'Fruit Consumption'
+          },
+          xAxis: {
+              categories: ['Apricots','Apples', 'Bananas', 'Oranges']
+          },
+          yAxis: {
+              title: {
+                  text: 'Fruit eaten'
+              }
+          },
+          series: [{
+              name: 'Gary',
+              data: [6, 1, 0, 4]
+          }, {
+              name: 'Larry',
+              data: [6, 5, 7, 3]
+          }]
+  });
+</script>
 
   <!-- DO NOT write anything below these required tags /18 -->
 </body>
